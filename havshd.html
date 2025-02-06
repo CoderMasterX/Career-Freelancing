@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en"> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>CareerHub Pro - Ultimate Freelancing Platform</title> 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> 
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"> 
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> 
+  <style>
+        :root {
+            --primary-color: #2A2A72;
+            --secondary-color: #009FFD;
+            --accent-color: #FF0076;
+            --text-color: #2B2B2B;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system;
+            line-height: 1.6;
+            color: var(--text-color);
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+
+        .hero-section {
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            z-index: 1;
+        }
+
+        .animated-blob {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: blob 20s infinite;
+        }
+
+        @keyframes blob {
+            0%, 100% { transform: translate(0,0) scale(1); }
+            25% { transform: translate(200px,150px) scale(1.2); }
+            50% { transform: translate(-100px,300px) scale(0.8); }
+            75% { transform: translate(-200px,100px) scale(1.1); }
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60%;
+            height: 4px;
+            background: var(--secondary-color);
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 1rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .stats-number {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .timeline-item {
+            padding: 20px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+
+        .testimonial-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 1rem;
+            position: relative;
+        }
+
+        .testimonial-card::before {
+            content: "\201C";
+            font-size: 5rem;
+            position: absolute;
+            top: -20px;
+            left: 10px;
+            color: var(--secondary-color);
+            opacity: 0.3;
+        }
+
+        .cta-section {
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 5rem 0;
+            border-radius: 15px;
+        }
+
+        .footer {
+            background: var(--text-color);
+            color: white;
+            padding: 4rem 0;
+        }
+
+        .hover-underline {
+            display: inline-block;
+            position: relative;
+        }
+
+        .hover-underline::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background: currentColor;
+            transition: width 0.3s ease;
+        }
+
+        .hover-underline:hover::after {
+            width: 100%;
+        }
+
+        /* Enhanced button styles */
+        .btn-custom {
+            background: var(--secondary-color);
+            color: white;
+            font-weight: 600;
+            padding: 12px 30px;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-custom:hover {
+            background: var(--accent-color);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transform: scale(1.05);
+        }
+
+        .btn-custom:focus, .btn-custom:active {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(0, 159, 253, 0.5);
+        }
+    </style> 
+ </head> 
+ <body> <!-- Hero Section --> 
+  <section class="hero-section"> 
+   <div class="animated-blob"></div> 
+   <div class="container hero-content"> 
+    <div class="row"> 
+     <div class="col-lg-8" data-aos="fade-right"> 
+      <h1 class="display-3 fw-bold mb-4">Transform Your Career in the Gig Economy</h1> 
+      <p class="lead mb-4">Master freelancing, build your brand, and earn 6 figures with our proven system</p> 
+      <a href="#cta" class="btn btn-custom btn-lg px-5 py-3">Start Free Trial</a> 
+     </div> 
+    </div> 
+   </div> 
+  </section> <!-- Freelancing Benefits --> 
+  <section class="py-5"> 
+   <div class="container"> 
+    <h2 class="section-title text-center mb-5" data-aos="fade-up">Why Choose Freelancing?</h2> 
+    <div class="row"> 
+     <div class="col-md-4" data-aos="zoom-in"> 
+      <div class="feature-card"> 
+       <i class="fas fa-chart-line fa-3x text-primary mb-3"></i> 
+       <h3>Unlimited Earning Potential</h3> 
+       <p>Top freelancers earn $150+/hour working on global projects</p> 
+      </div> 
+     </div> <!-- Add more feature cards --> 
+    </div> 
+   </div> 
+  </section> <!-- Statistics Section --> 
+  <section class="py-5 bg-white"> 
+   <div class="container"> 
+    <div class="row text-center"> 
+     <div class="col-md-3" data-aos="flip-up"> 
+      <div class="stats-number">
+       73%
+      </div> 
+      <p>of companies hiring remote workers</p> 
+     </div> <!-- Add more stats --> 
+    </div> 
+   </div> 
+  </section> <!-- How It Works --> 
+  <section class="py-5"> 
+   <div class="container"> 
+    <h2 class="section-title" data-aos="fade-up">Your Roadmap to Success</h2> 
+    <div class="timeline"> <!-- Timeline items --> 
+    </div> 
+   </div> 
+  </section> <!-- Success Stories --> 
+  <section class="py-5"> 
+   <div class="container"> 
+    <div class="testimonial-card"> 
+     <p>"CareerHub helped me triple my income in 6 months!"</p> 
+     <h4>Sarah Johnson</h4> 
+     <p>Full-Stack Developer</p> 
+    </div> 
+   </div> 
+  </section> <!-- Courses Section --> 
+  <section class="py-5"> 
+   <div class="container"> 
+    <h2 class="section-title">Premium Learning Paths</h2> 
+    <div class="row"> <!-- Course cards --> 
+    </div> 
+   </div> 
+  </section> <!-- FAQ Section --> 
+  <section class="py-5 bg-light"> 
+   <div class="container"> 
+    <h2 class="section-title">Frequently Asked Questions</h2> <!-- FAQ items --> 
+   </div> 
+  </section> <!-- Contact Section --> 
+  <section id="cta" class="py-5"> 
+   <div class="container"> 
+    <div class="cta-section"> 
+     <h2 class="text-center mb-4">Start Your Journey Today</h2> 
+     <form> <!-- Contact form --> 
+      <button class="btn btn-custom">Submit</button>
+     </form> 
+    </div> 
+   </div> 
+  </section> <!-- Footer --> 
+  <footer class="footer"> 
+   <div class="container"> <!-- Footer content --> 
+   </div> 
+  </footer> 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> 
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
+  <script>
+        AOS.init({
+            duration: 1000,
+            once: false,
+            mirror: true
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Parallax effect
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            document.querySelector('.hero-section').style.backgroundPositionY = (scrolled * 0.5) + 'px';
+        });
+    </script> 
+ 
+</body></html>
